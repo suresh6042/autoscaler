@@ -11,12 +11,11 @@ import (
 	"vmware/autoscaler"
 )
 func main(){
-	err:=os.Setenv("VCS_ENDPOINT","https://dstadmin@vsphere.local:Adm!n4DST@vcenter.qanon-prod.smdibm.com/sdk")
 	_,vcs_endpoint_set:=os.LookupEnv("VCS_ENDPOINT")
 	if !vcs_endpoint_set{
 		panic("Environment variable VCS_ENDPOINT not set")
 	}
-	config:=flag.String("config",`C:\Users\SureshR\go\src\vmware\config.yaml`,"Config file path")
+	config:=flag.String("config","","Config file path")
 	if *config == "" {
 		panic("Config file path not defined")
 	}
