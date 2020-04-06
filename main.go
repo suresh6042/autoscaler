@@ -16,11 +16,11 @@ func main(){
 		panic("Environment variable VCS_ENDPOINT not set")
 	}
 	config:=flag.String("config","","Config file path")
-	if *config == "" {
-		panic("Config file path not defined")
-	}
 	interval:=flag.String("interval","30s","Interval to monitor VCS alarms")
 	flag.Parse()
+		if *config == "" {
+		panic("Config file path not defined")
+	}
 	duration,err:=time.ParseDuration(*interval)
 	autoscaler.Errorhandle(err)
 	vcs_raw_url:=os.Getenv("VCS_ENDPOINT")
