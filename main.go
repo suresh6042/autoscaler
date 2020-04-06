@@ -18,7 +18,7 @@ func main(){
 	config:=flag.String("config","","Config file path")
 	interval:=flag.String("interval","30s","Interval to monitor VCS alarms")
 	flag.Parse()
-		if *config == "" {
+	if *config == "" {
 		panic("Config file path not defined")
 	}
 	duration,err:=time.ParseDuration(*interval)
