@@ -1,0 +1,18 @@
+  - name: gsspint3wrk03
+    cpualarm: alarm-5
+    memoryalarm: alarm-6
+    cputoscale: 1
+    memorytoscale: 256
+    cputhreshold: 4
+    memorythreshold: 10000
+
+  - name: gsspint3wrk02
+    cpualarm: alarm-5
+    memoryalarm: alarm-6
+    cputoscale: 1
+    memorytoscale: 256
+    cputhreshold: 4
+    memorythreshold: 10000
+
+
+
